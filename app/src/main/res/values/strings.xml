@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Pfa_Project</string>
+    <string name="text_result_hint">Le texte transcrit apparaîtra ici...</string>
+</resources>
