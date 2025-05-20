@@ -180,48 +180,35 @@ public class HistoryActivity extends AppCompatActivity {
             noteLayout.setOrientation(LinearLayout.VERTICAL);
             noteLayout.setPadding(0, 0, 0, 32);
 
-            // Texte de la note
             TextView noteView = new TextView(this);
             noteView.setText("📅 " + sdf.format(note.timestamp) + "\n📝 " + note.text);
             noteView.setTextSize(16);
 
-            // Zone pour afficher le résumé
+            // 🔽 Résumé automatique du texte
+            String summary = TextSummarizer.summarize(note.text);
             TextView summaryView = new TextView(this);
+            summaryView.setText("📄 Résumé : " + summary);
             summaryView.setTextSize(14);
             summaryView.setPadding(0, 8, 0, 8);
 
-            // 🔘 Bouton "Résumer"
-            Button btnSummarize = new Button(this);
-            btnSummarize.setText("📄 Résumer");
-            btnSummarize.setOnClickListener(v -> {
-                String summary = TextSummarizer.summarize(note.text);
-                summaryView.setText("📄 Résumé : " + summary);
-            });
-
-            // Bouton Modifier
             Button btnEdit = new Button(this);
             btnEdit.setText("✏️ Modifier");
             btnEdit.setOnClickListener(v -> showEditDialog(note));
 
-            // Bouton Supprimer
             Button btnDelete = new Button(this);
             btnDelete.setText("🗑 Supprimer");
             btnDelete.setOnClickListener(v -> {
                 AppDatabase.getInstance(this).noteDao().delete(note);
-                loadNotes(); // Recharger
+                loadNotes();
             });
 
-            // Ajouter tous les éléments au layout
             noteLayout.addView(noteView);
-            noteLayout.addView(btnSummarize);
             noteLayout.addView(summaryView);
             noteLayout.addView(btnEdit);
             noteLayout.addView(btnDelete);
-
             notesContainer.addView(noteLayout);
         }
     }
-
 
     private void showEditDialog(Note note) {
         EditText input = new EditText(this);

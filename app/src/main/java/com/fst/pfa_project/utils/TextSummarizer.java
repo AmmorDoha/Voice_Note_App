@@ -40,9 +40,9 @@ public class TextSummarizer {
             }
         });
 
-        // Résumé avec les 2 meilleures phrases
+        // Résumé avec les 200 meilleures phrases
         StringBuilder summary = new StringBuilder();
-        int count = Math.min(2, sorted.size());
+        int count = Math.min(200, sorted.size());
         for (int i = 0; i < count; i++) {
             summary.append(sorted.get(i).getKey()).append(" ");
         }
