@@ -74,8 +74,7 @@ The summarizer in `TextSummarizer.java` uses a **simple NLP algorithm**:
 | Home | History | Edit & Share |
 |--![image](https://github.com/user-attachments/assets/d6f888d5-6704-4628-b48f-997e63d5f354)
 ![image](https://github.com/user-attachments/assets/6f8d16ef-1fe3-401d-915b-c6d96dc9fd14)
-![image](https://github.com/user-attachments/assets/3b48e395-7500-46ee-ba6d-2af3fa13a6d4)
-![image](https://github.com/user-attachments/assets/ff198b77-3004-4255-a6ff-5f7868a85a16)
+
 
 
 
