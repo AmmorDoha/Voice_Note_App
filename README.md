@@ -85,7 +85,7 @@ The summarizer in `TextSummarizer.java` uses a **simple NLP algorithm**:
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/VoiceNote-AI.git
+git clone https://github.com/AmmorDoha/VoiceNote-AI.git
 
 2 .Open with Android Studio
 
@@ -124,11 +124,6 @@ Whisper Speech-to-Text
 
 ---
 
-### ✅ Instructions :
 
-- Place your screenshots in `/screenshots/` and name them:
-  - `main.png`
-  - `history.png`
-  - `edit_share.png`
 
 
